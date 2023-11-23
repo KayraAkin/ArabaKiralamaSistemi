@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess.Abstract
+namespace Core.Entities;
+
+public interface IEntities
 {
-    public interface IEntities
-    {
-    }
 }
