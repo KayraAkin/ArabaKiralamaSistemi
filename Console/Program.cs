@@ -8,7 +8,7 @@ CarManager carManager = new CarManager(new EfCarDal());
 
 
 
-foreach (var car in carManager.GetCarDetail())
+foreach (var car in carManager.GetCarDetail().Data)
 {
     Console.WriteLine(car.Name + "/" + car.ColorName);
 }
