@@ -41,5 +41,36 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetail());
         }
+
+        public IDataResult<List<Car>> GetById(int id)
+        {
+            return new SuccessDataResult<List<Car>>(_carDal.GetAll(p=> p.Id == id));
+        }
+
+        public IResult Add(Car car)
+        {
+            if (car.DailyPrice > 0)
+            {
+                _carDal.Add(car);
+                return new SuccessResult(Messages.ProductAdded);
+            }
+            else
+            {
+                return new ErrorResult(Messages.AddedFail);
+            }
+
+        }
+
+        public IResult Update(Car car)
+        {
+            _carDal.Update(car);
+            return new SuccessResult(Messages.ProductUpdated);
+        }
+
+        public IResult Delete(Car car)
+        {
+            _carDal.Delete(car);
+            return new SuccessResult(Messages.ProductDeleted);
+        }
     }
 }
