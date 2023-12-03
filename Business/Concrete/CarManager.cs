@@ -1,9 +1,9 @@
 ﻿using Business.Abstract;
 using Business.Constants;
 using Core.Results;
-using DataAccess.Abstract;
-using DataAccess.Concrete;
-using DataAccess.Concrete.InMemory;
+using Entities.Abstract;
+using Entities.Concrete;
+using Entities.Concrete.InMemory;
 using Entities.DTOs;
 using System;
 using System.Collections.Generic;
@@ -24,7 +24,7 @@ namespace Business.Concrete
 
         public IDataResult<List<Car>> GetCarsByColorId(int id)
         {
-            return new SuccessDataResult<List<Car>>(_carDal.GetAll(p => p.ColorId == id));
+            return new SuccessDataResult<List<Car>>(_carDal.GetAll(p => p.ColorId == id),Messages.ProductsListed);
         }
 
         public IDataResult<List<Car>> GetAll()
@@ -39,12 +39,12 @@ namespace Business.Concrete
 
         public IDataResult<List<CarDetailDto>> GetCarDetail()
         {
-            return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetail());
+            return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetail(),Messages.ProductsListed);
         }
 
         public IDataResult<List<Car>> GetById(int id)
         {
-            return new SuccessDataResult<List<Car>>(_carDal.GetAll(p=> p.Id == id));
+            return new SuccessDataResult<List<Car>>(_carDal.GetAll(p=> p.Id == id),Messages.ProductsListed);
         }
 
         public IResult Add(Car car)

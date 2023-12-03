@@ -1,9 +1,9 @@
 ﻿
 using Business.Concrete;
-using DataAccess.Abstract;
-using DataAccess.Concrete;
-using DataAccess.Concrete.EntityFramework;
-using DataAccess.Concrete.InMemory;
+using Entities.Abstract;
+using Entities.Concrete;
+using Entities.Concrete.EntityFramework;
+using Entities.Concrete.InMemory;
 using Entities.Concrete;
 
 //CarManager carManager = new CarManager(new EfCarDal());

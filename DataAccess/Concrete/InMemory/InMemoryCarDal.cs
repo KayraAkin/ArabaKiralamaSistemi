@@ -1,4 +1,4 @@
-﻿using DataAccess.Abstract;
+﻿using Entities.Abstract;
 using Entities.DTOs;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess.Concrete.InMemory
+namespace Entities.Concrete.InMemory
 {
     public class InMemoryCarDal : ICarDal
     {

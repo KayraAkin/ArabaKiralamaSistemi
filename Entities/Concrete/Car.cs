@@ -5,15 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess.Concrete
+namespace Entities.Concrete;
+
+public class Car:IEntities
 {
-    public class Car:IEntities
-    {
-        public int Id { get; set; }
-        public int BrandId { get; set; }
-        public int ColorId { get; set; }
-        public int ModelYear { get; set; }
-        public int DailyPrice { get; set; }
-        public string Description { get; set; }
-    }
+    public int Id { get; set; }
+    public int BrandId { get; set; }
+    public int ColorId { get; set; }
+    public int ModelYear { get; set; }
+    public int DailyPrice { get; set; }
+    public string Description { get; set; }
 }

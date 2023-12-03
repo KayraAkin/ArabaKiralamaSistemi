@@ -1,5 +1,5 @@
 ﻿using Core.Results;
-using DataAccess.Concrete;
+using Entities.Concrete;
 using Entities.Concrete;
 using Entities.DTOs;
 using System;
