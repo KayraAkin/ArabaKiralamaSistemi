@@ -20,6 +20,18 @@ namespace Business.Concrete
             _brandDal = brandDal;
         }
 
+        public IResult Add(Brand brand)
+        {
+            _brandDal.Add(brand);
+            return new SuccessResult(Messages.ProductAdded);
+        }
+
+        public IResult Delete(Brand brand)
+        {
+            _brandDal.Delete(brand);
+            return new SuccessResult(Messages.ProductDeleted);
+        }
+
         public IDataResult<List<Brand>> GetAll()
         {
             return new SuccessDataResult<List<Brand>>( _brandDal.GetAll(),Messages.ProductsListed);
